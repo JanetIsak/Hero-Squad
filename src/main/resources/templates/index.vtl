@@ -1,5 +1,16 @@
 <div class="container">
-    <h1>Heroes list</h1>
+    <h1>Heroes list</h1> #if ($hero)
+    <p>Selected hero:</p>
+    <p>$hero.getName()</p>
+    <p>$hero.getAge()</p>
+    <p>$hero.getPower()</p>
+    <p>$hero.getWeakness()</p>
+    #else
+    <p>Hero unavailable!</p>
+    #end
+
+    <p>Add a new Hero:</p>
+
     <form action="/heroes" method="post">
         <div class="form-group">
             <label for="name">Name</label>
