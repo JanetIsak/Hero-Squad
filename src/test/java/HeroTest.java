@@ -23,4 +23,18 @@ public class HeroTest {
     assertEquals(0, Hero.all().size());
   }
 
+  @Test
+  public void getId_heroInstantiatesWithId_1() {
+    Hero.clear();
+    Hero newHero = new Hero("Spider Man", 30, "Flying Around", "Beautiful Girl");
+    assertEquals(1, newHero.getId());
+  }
+
+  @Test
+  public void find_returnsHeroWithSameId_secondHero() {
+  Hero.clear();
+  Hero firstHero = new Hero("Spider Man", 30, "Flying Around", "Beautiful Girl");
+  Hero secondHero = new Hero("Black Panther", 35, "Technology", "Fighting");
+  assertEquals(secondHero, Hero.find(secondHero.getId()));  
+  }
 }
