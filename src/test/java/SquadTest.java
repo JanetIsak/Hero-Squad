@@ -51,4 +51,12 @@ public class SquadTest {
      Squad testSquad = new Squad("Strongest", 5, "Girl trafficking");
      assertEquals(0, testSquad.getHeroes().size());
    }
+
+   @Test
+   public void addHero_addsHeroToList_true() {
+     Squad testSquad = new Squad("Strongest", 5, "Girl trafficking");
+     Hero newHero = new Hero("Spider Man", 30, "Flying Around", "Beautiful Girl");
+     testSquad.addHero(newHero);
+     assertTrue(testSquad.getHeroes().contains(testHero));
+   }
 }
