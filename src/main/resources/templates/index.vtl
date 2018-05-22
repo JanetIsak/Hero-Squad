@@ -1,10 +1,13 @@
 <div class="container">
-    <h1>Heroes list</h1> #if ($hero)
-    <p>Selected hero:</p>
-    <p>$hero.getName()</p>
-    <p>$hero.getAge()</p>
-    <p>$hero.getPower()</p>
-    <p>$hero.getWeakness()</p>
+    <h1>Heroes list</h1> #if ($heroes)
+    <ul>
+        #foreach ($hero in $heroes)
+        <li>$hero.getName()</li>
+        <li>$hero.getAge()</li>
+        <li>$hero.getPower()</li>
+        <li>$hero.getWeakness()</li>
+        #end
+    </ul>
     #else
     <p>Hero unavailable!</p>
     #end
@@ -18,15 +21,15 @@
         </div>
         <div class="form-group">
             <label for="age">Age</label>
-            <input id="age" name="email" type="number" class="form-control">
+            <input id="age" name="age" type="number" class="form-control">
         </div>
         <div class="form-group">
             <label for="power">Power</label>
             <input id="power" name="power" type="text" class="form-control">
         </div>
         <div class="form-group">
-            <label for="weakess">Weakness</label>
-            <input id="weakess" name="weakess" type="text" class="form-control">
+            <label for="weakness">Weakness</label>
+            <input id="weakness" name="weakness" type="text" class="form-control">
         </div>
         <button type="submit" class="btn btn-primary">Add Hero!</button>
     </form>

@@ -12,7 +12,7 @@ public class App {
 
     get("/", (request, response) -> {
      Map<String, Object> model = new HashMap<String, Object>();
-     model.put("hero", request.session().attribute("hero"));
+     model.put("heroes", request.session().attribute("heroes"));
      model.put("template", "templates/index.vtl");
      return new ModelAndView(model, layout);
    }, new VelocityTemplateEngine());
@@ -20,12 +20,19 @@ public class App {
    post("/heroes", (request, response) -> {
      Map<String, Object> model = new HashMap<String, Object>();
 
+     ArrayList<Hero> heroes = request.session().attribute("heroes");
+     if (heroes == null) {
+        heroes = new ArrayList<Hero>();
+        request.session().attribute("heroes", heroes);
+     }
+
      String name = request.queryParams("name");
      int age = Integer.parseInt(request.queryParams("age"));
      String power = request.queryParams("power");
      String weakness = request.queryParams("weakness");
      Hero newHero = new Hero(name, age, power, weakness);
-     request.session().attribute("hero", newHero);
+     heroes.add(newHero);
+     request.session().attribute("heroes", heroes);
 
      model.put("template", "templates/heroList.vtl");
      return new ModelAndView(model, layout);
