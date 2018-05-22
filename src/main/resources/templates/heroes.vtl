@@ -1,0 +1,14 @@
+<h1>Heroes list</h1> #if ($heroes)
+<ul>
+    #foreach ($hero in $heroes)
+    <li><a href="/heroes/$hero.getId()">$hero.getName()</a></li>
+    <li><a href="/heroes/$hero.getId()">$hero.getAge()</a></li>
+    <li><a href="/heroes/$hero.getId()">$hero.getPower()</a></li>
+    <li><a href="/heroes/$hero.getId()">$hero.getWeakness()</a></li>
+    #end
+</ul>
+#else
+<p>Hero unavailable!</p>
+#end
+
+<a href="/heroes/new">Add New Hero</a>

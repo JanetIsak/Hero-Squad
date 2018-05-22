@@ -1,36 +1,4 @@
-<div class="container">
-    <h1>Heroes list</h1> #if ($heroes)
-    <ul>
-        #foreach ($hero in $heroes)
-        <li>$hero.getName()</li>
-        <li>$hero.getAge()</li>
-        <li>$hero.getPower()</li>
-        <li>$hero.getWeakness()</li>
-        #end
-    </ul>
-    #else
-    <p>Hero unavailable!</p>
-    #end
+<h1>Welcome to the Heroes List Application</h1>
 
-    <p>Add a new Hero:</p>
-
-    <form action="/heroes" method="post">
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="age">Age</label>
-            <input id="age" name="age" type="number" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="power">Power</label>
-            <textarea id="power" name="power" type="text" row "10" class="form-control"></textarea>
-        </div>
-        <div class="form-group">
-            <label for="weakness">Weakness</label>
-            <textarea id="weakness" name="weakness" type="text" row "10" class="form-control"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Add Hero!</button>
-    </form>
-</div>
+<a href="/heroes/new">Add a new hero</a>
+<a href="/heroes">View all popular heroes</a>

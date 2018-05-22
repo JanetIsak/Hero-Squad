@@ -5,27 +5,27 @@ public class SquadTest {
 
     @Test
     public void squad_instantiatesCorrectly_true() {
-      Squad testSquad = new Squad("Strongest");
+      Squad testSquad = new Squad("Strongest", 5, "Girl trafficking");
       assertEquals(true, testSquad instanceof Squad);
    }
 
     @Test
     public void getName_squadInstantiatesWithName_Strongest() {
-      Squad testSquad = new Squad("Strongest");
+      Squad testSquad = new Squad("Strongest", 5, "Girl trafficking");
       assertEquals("Strongest", testSquad.getName());
    }
 
     @Test
     public void all_returnsAllInstancesOfSquad_true() {
-      Squad firstSquad = new Squad("Strongest");
-      Squad secondSquad = new Squad("Modern");
+      Squad firstSquad = new Squad("Strongest", 5, "Girl trafficking");
+      Squad secondSquad = new Squad("Modern", 6, "Computer illiteracy");
       assertEquals(true, Squad.all().contains(firstSquad));
       assertEquals(true, Squad.all().contains(secondSquad));
    }
 
    @Test
    public void clear_emptiesAllSquadFromList_0() {
-     Squad testSquad = new Squad("Strongest");
+     Squad testSquad = new Squad("Strongest", 5, "Girl trafficking");
      Squad.clear();
      assertEquals(0, Squad.all().size());
    }
@@ -33,15 +33,22 @@ public class SquadTest {
    @Test
    public void getId_squadInstantiatesWithId_1() {
      Squad.clear();
-     Squad testSquad = new Squad("Strongest");
+     Squad testSquad = new Squad("Strongest", 5, "Girl trafficking");
      assertEquals(1, testSquad.getId());
   }
 
    @Test
    public void find_returnsSquadWihSameId_secondSquad() {
      Squad.clear();
-     Squad firstSquad = new Squad("Strongest");
-     Squad secondSquad = new Squad("Modern");
+     Squad firstSquad = new Squad("Strongest", 5, "Girl trafficking");
+     Squad secondSquad = new Squad("Modern", 6, "Computer illiteracy");
      assertEquals(secondSquad, Squad.find(secondSquad.getId()));
+   }
+
+   @Test
+   public void getHeroes_returnsEmptyList_ArrayList() {
+     Squad.clear();
+     Squad testSquad = new Squad("Strongest", 5, "Girl trafficking");
+     assertEquals(0, testSquad.getHeroes().size());
    }
 }
