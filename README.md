@@ -1,4 +1,4 @@
-Moringa School core IP1
+Moringa School core Java IP2
 
 # _Hero-Squad_
 
@@ -18,15 +18,14 @@ _The applications allows users to do the following:_
 
 ## Setup/Installation Requirements
 
-* _Make sure you have Java, Gradle and installed._
+* _Make sure you have Java, Gradle installed._
 * _Clone this repository from my Github named JanetIsak._
-* _Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files._
-* _Go to https://janetisak.github.io/Quotes/ for more information._
+* _Go to https://hidden-waters-22388.herokuapp.com/ for more information._
 
 
 ## Known Bugs
 
-_The application submits blank form and adds empty quote details to the quotes list._
+_No known bugs._
 
 ## Support and contact details
 
@@ -34,8 +33,10 @@ _If you run into any issues or have questions, ideas or concerns, contact me at 
 
 ## Technologies Used
 
-* _Angular JS_
-* _HTML & CSS_
+* _Java_
+* _Gradle_
+* _Spark_
+* _Velocity_
 
 ### License
 
