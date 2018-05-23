@@ -4,7 +4,7 @@ apply plugin: 'application'
 archivesBaseName = "Hero-Squad"
 version = '1.0'
 
-applicationName = “Hero-Squad” 
+applicationName = "Hero-Squad"
 mainClassName = "App"
 
 repositories {
