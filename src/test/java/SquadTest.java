@@ -28,11 +28,11 @@ public class SquadTest {
       assertEquals(true, Squad.all().contains(secondSquad));
    }
 
-   @Test
-   public void clear_emptiesAllSquadFromList_0() {
-     Squad testSquad = new Squad("Strongest", 5, "Girl trafficking");
-     assertEquals(0, Squad.all().size());
-   }
+   // @Test
+   // public void clear_emptiesAllSquadFromList_0() {
+   //   Squad testSquad = new Squad("Strongest", 5, "Girl trafficking");
+   //   assertEquals(0, Squad.all().size());
+   // }
 
    @Test
    public void getId_squadInstantiatesWithId_1() {
@@ -58,7 +58,7 @@ public class SquadTest {
      Squad testSquad = new Squad("Strongest", 5, "Girl trafficking");
      Hero newHero = new Hero("Spider Man", 30, "Flying Around", "Beautiful Girl");
      testSquad.addHero(newHero);
-     assertTrue(testSquad.getHeroes().contains(testHero));
+     assertTrue(testSquad.getHeroes().contains(newHero));
    }
 
    // @Test
