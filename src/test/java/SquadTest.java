@@ -60,4 +60,9 @@ public class SquadTest {
      testSquad.addHero(newHero);
      assertTrue(testSquad.getHeroes().contains(testHero));
    }
+
+   // @Test
+   // public void find_returnsNullWhenNoHeroFound_null() {
+   //   assertTrue(Squad.find() == null);
+   // }
 }

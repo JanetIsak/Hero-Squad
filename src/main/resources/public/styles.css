@@ -1,0 +1,16 @@
+body {
+    background-image: url(../images/ladyhero.jpg);
+    background-size: cover;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 60px;
+    color: black;
+    padding-top: 5%;
+}
+
+.btn-danger {
+    size: 40px;
+}
