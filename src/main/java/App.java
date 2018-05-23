@@ -67,7 +67,7 @@ public class App {
     return new ModelAndView(model, layout);
   }, new VelocityTemplateEngine());
 
-   post("/heroes", (request, response) -> {
+   post("/heroes/new", (request, response) -> {
      Map<String, Object> model = new HashMap<String, Object>();
 
      ArrayList<Hero> heroes = request.session().attribute("heroes");
@@ -98,7 +98,7 @@ public class App {
         return new ModelAndView(model, layout);
       }, new VelocityTemplateEngine());
 
-     post("/tasks", (request, response) -> {
+     post("/heroes", (request, response) -> {
         Map<String, Object> model = new HashMap<String, Object>();
 
         Squad squad = Squad.find(Integer.parseInt(request.queryParams("squadId")));
