@@ -1,2 +1,1 @@
 # Hero-Squad
-Recruiting application

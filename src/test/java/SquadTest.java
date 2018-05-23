@@ -3,6 +3,11 @@ import static org.junit.Assert.*;
 
 public class SquadTest {
 
+  @After
+  public void autoClear() {
+    Squad.clear();
+  }
+
     @Test
     public void squad_instantiatesCorrectly_true() {
       Squad testSquad = new Squad("Strongest", 5, "Girl trafficking");
@@ -26,20 +31,17 @@ public class SquadTest {
    @Test
    public void clear_emptiesAllSquadFromList_0() {
      Squad testSquad = new Squad("Strongest", 5, "Girl trafficking");
-     Squad.clear();
      assertEquals(0, Squad.all().size());
    }
 
    @Test
    public void getId_squadInstantiatesWithId_1() {
-     Squad.clear();
      Squad testSquad = new Squad("Strongest", 5, "Girl trafficking");
      assertEquals(1, testSquad.getId());
   }
 
    @Test
    public void find_returnsSquadWihSameId_secondSquad() {
-     Squad.clear();
      Squad firstSquad = new Squad("Strongest", 5, "Girl trafficking");
      Squad secondSquad = new Squad("Modern", 6, "Computer illiteracy");
      assertEquals(secondSquad, Squad.find(secondSquad.getId()));
@@ -47,7 +49,6 @@ public class SquadTest {
 
    @Test
    public void getHeroes_returnsEmptyList_ArrayList() {
-     Squad.clear();
      Squad testSquad = new Squad("Strongest", 5, "Girl trafficking");
      assertEquals(0, testSquad.getHeroes().size());
    }
